@@ -292,17 +292,18 @@ Developed with ❤️ in Chile 🇨🇱
 <!-- ----------------------------------------------------------------------- -->
 
 <!-- Forks -->
-[forks-badge]: https://img.shields.io/github/forks/BigSamu/Buda_Prices_ReactJS.svg
-[forks-url]: https://github.com/BigSamu/Buda_Prices_ReactJS/network/members
+[forks-badge]: https://img.shields.io/github/forks/BigSamu/The_Wishes_Company.svg
+[forks-url]: https://github.com/BigSamu/The_Wishes_Company/network/members
 <!-- Stargazers -->
-[stars-badge]: https://img.shields.io/github/stars/BigSamu/Buda_Prices_ReactJS.svg
-[stars-url]: https://github.com/BigSamu/Buda_Prices_ReactJS/stargazers
+[stars-badge]: https://img.shields.io/github/stars/BigSamu/The_Wishes_Company.svg
+[stars-url]: https://github.com/BigSamu/The_Wishes_Company/stargazers
 <!-- Watchers -->
-[watchers-badge]: https://img.shields.io/github/watchers/BigSamu/Buda_Prices_ReactJS.svg
-[watchers-url]: https://github/BigSamu/Buda_Prices_ReactJS/watchers
+[watchers-badge]: https://img.shields.io/github/watchers/BigSamu/The_Wishes_Company.svg
+[watchers-url]: https://github.com/BigSamu/The_Wishes_Company/graphs/traffic
 <!-- License -->
-[license-badge]:https://img.shields.io/github/license/BigSamu/Buda_Prices_ReactJS.svg
+[license-badge]:https://img.shields.io/github/license/BigSamu/The_Wishes_Company.svg
 [license-url]: ./LICENSE.md
+<!-- Follow -->
 [github-follow-badge]: https://img.shields.io/github/followers/BigSamu.svg?style=social&label=Follow
 [github-follow-url]: https://github.com/BigSamu?tab=followers
 
