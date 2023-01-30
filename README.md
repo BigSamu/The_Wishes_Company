@@ -74,10 +74,12 @@ The code extract the largest transactions performed in [Buda](https://www.buda.c
 
 The following technologies are used for the implementation of this project:
 
- [![NodeJS][node-js-badge]][node-js-url]
- [![NPM][npm-badge]][npm-url]
- [![ReactJS][react-js-badge]][react-js-url]
- [![Bootstrap][bootstrap-badge]][bootstrap-url]
+[![HTML5][html5-badge]][html5-url]
+[![Python][python-badge]][python-url]
+[![PyPI][pypi-badge]][pypi-url]
+[![Django][django-badge]][django-url]
+[![Bootstrap][bootstrap-badge]][bootstrap-url]
+[![Jinja][jinja-badge]][jinja-url]
 
 <p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
@@ -224,7 +226,22 @@ Developed with ❤️ in Chile 🇨🇱
 <!-- A.1) Teachnologies -->
 <!-- ----------------------------------------------------------------------- -->
 
-<!-- 1) Frontend Frameworks and Libraries -->
+<!-- 1) Programming Languages -->
+
+<!-- HTML5 -->
+[html5-badge]:https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=for-the-badge
+[html5-url]: https://dev.w3.org/html5/spec-LC/
+<!-- Javascript -->
+[javascript-badge]: https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge
+[javascript-url]: https://www.javascript.com/
+<!-- Python -->
+[python-badge]: https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=for-the-badge
+[python-url]: https://www.python.org/
+<!-- Ruby -->
+[ruby-badge]: https://www.ruby-lang.org/
+[ruby-url]: https://www.ruby-lang.org/
+
+<!-- 2) Frontend Frameworks and Libraries -->
 
 <!-- ReactJS -->
 [react-js-badge]: https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=for-the-badge
@@ -232,14 +249,26 @@ Developed with ❤️ in Chile 🇨🇱
 <!-- Bootstrao -->
 [bootstrap-badge]: https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white
 [bootstrap-url]: https://getbootstrap.com/
+<!-- Jinja -->
+[jinja-badge]: https://img.shields.io/badge/Jinja-B41717?logo=jinja&logoColor=fff&style=for-the-badge
+[jinja-url]: https://jinja.palletsprojects.com/
 
-<!-- 2) Backend Frameworks and Libraries -->
+<!-- 3) Backend Frameworks and Libraries -->
 <!-- Sinatra Ruby -->
 [ruby-sinatra-badge]:(https://img.shields.io/badge/Ruby%20Sinatra-000?logo=rubysinatra&logoColor=fff&style=for-the-badge)
 [ruby-sinatra-url]: https://sinatrarb.com/
+<!-- Django -->
+[django-badge]: https://img.shields.io/badge/Django-092E20?logo=django&logoColor=fff&style=for-the-badge
+[django-url]: https://www.djangoproject.com/
 
 
-<!-- 3) Development Environments & Package Managers -->
+<!-- 4) Databases -->
+
+<!-- SQLite -->
+[sqlite-badge]: https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=fff&style=for-the-badge
+[sqlite-url]: https://sqlite.org/
+
+<!-- 5) Development Environments & Package Managers -->
 
 <!-- NodeJS -->
 [node-js-badge]: https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white
@@ -247,12 +276,12 @@ Developed with ❤️ in Chile 🇨🇱
 <!-- NPM -->
 [npm-badge]:https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=fff&style=for-the-badge
 [npm-url]: https://www.npmjs.com/
-<!-- Ruby -->
-[ruby-badge]: https://www.ruby-lang.org/
-[ruby-url]: https://www.ruby-lang.org/
 <!-- RubyGems-->
 [ruby-gems-badge]: https://img.shields.io/badge/RubyGems-E9573F?logo=rubygems&logoColor=fff&style=for-the-badge
 [ruby-gems-url]: https://rubygems.org/
+<!-- PyPI -->
+[pypi-badge]: https://img.shields.io/badge/PyPI-3775A9?logo=pypi&logoColor=fff&style=for-the-badge
+[pypi-url]: https://pypi.org/
 
 
 <!-- ----------------------------------------------------------------------- -->
