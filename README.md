@@ -299,7 +299,7 @@ Developed with ❤️ in Chile 🇨🇱
 [stars-url]: https://github.com/BigSamu/The_Wishes_Company/stargazers
 <!-- Watchers -->
 [watchers-badge]: https://img.shields.io/github/watchers/BigSamu/The_Wishes_Company.svg
-[watchers-url]: https://github.com/BigSamu/The_Wishes_Company/graphs/traffic
+[watchers-url]: https://github.com/BigSamu/The_Wishes_Company/watchers
 <!-- License -->
 [license-badge]:https://img.shields.io/github/license/BigSamu/The_Wishes_Company.svg
 [license-url]: ./LICENSE.md
