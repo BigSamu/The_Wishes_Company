@@ -18,7 +18,7 @@
 <!-- omit in toc -->
 # The Wishes Company #
 
-A simple ReactJS web application that fetch data from [Buda API](https://api.buda.com/en/), an online Chilean cryptocurrency exchange market.
+A simple Django web application implementing CRUD operations and authentication.
 
 [![License][license-badge]][license-url]
 [![Forks][forks-badge]][forks-url]
@@ -37,9 +37,6 @@ A simple ReactJS web application that fetch data from [Buda API](https://api.bud
 - [About The Project](#about-the-project)
 - [Technologies](#technologies)
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Usage](#usage)
 - [Contact Me](#contact-me)
 - [Support](#support)
 - [License](#license)
@@ -54,10 +51,11 @@ A simple ReactJS web application that fetch data from [Buda API](https://api.bud
 
 ## About The Project
 
-The code extract the largest transactions performed in [Buda](https://www.buda.com/) exchange paltform in the last 24 hours for each cryptocurrency market. The results are presented in a table.
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
 <p align="center">
-  <img src="images/project-animation.gif" alt="animated" width="75%"/>
+  <img src="images/login-animation.gif" alt="login-animation" width="45%"/>
+  <img src="images/main-animation.gif" alt="main-animation" width="45%"/>
 </p>
 
 <!-- Demo available in following [link](#) -->
@@ -91,20 +89,22 @@ The following technologies are used for the implementation of this project:
 
 ## Getting Started
 
+IN PROGRESS....
+
 <!-- ----------------------------------------------------------------------- -->
 <!-- 3.1) Prerequisites -->
 <!-- ----------------------------------------------------------------------- -->
-### Prerequisites
+<!-- ### Prerequisites
 
 `Node.js` and `Node Package Manager (NPM)` are required for the setup of this web application.
 
 > Installation instructions [here][install-node-js-and-npm-url].
 
-> **NOTE:**  at the momment of creation of this project  `Node.js v18.6.0` and `NPM v9.4.0` were used.
+> **NOTE:**  at the momment of creation of this project  `Node.js v18.6.0` and `NPM v9.4.0` were used. -->
 
 <!-- 3.2) Installation -->
 <!-- ----------------------------------------------------------------------- -->
-### Installation
+<!-- ### Installation
 
 To get a copy of this project and run it in your local environment, follow the steps listed below.
 
@@ -132,16 +132,16 @@ To get a copy of this project and run it in your local environment, follow the s
    npm run
    ```
 
-<p align="right">(<a href="#back-to-top">back to top</a>)</p>
+<p align="right">(<a href="#back-to-top">back to top</a>)</p> -->
 
 <!-- ----------------------------------------------------------------------- -->
 <!-- 3.3) Usage -->
 <!-- ----------------------------------------------------------------------- -->
-### Usage
+<!-- ### Usage
 
 After succesfull installation, you will be able to check the WebApp in any browser by visiting the following URL address: [localhost: 3000](http://localhost:3000/)
 
-<p align="right">(<a href="#back-to-top">back to top</a>)</p>
+<p align="right">(<a href="#back-to-top">back to top</a>)</p> -->
 
 
 ---
