@@ -80,6 +80,7 @@ The following technologies are used for the implementation of this project:
 [![Django][django-badge]][django-url]
 [![Bootstrap][bootstrap-badge]][bootstrap-url]
 [![Jinja][jinja-badge]][jinja-url]
+[![Jinja][sqlite-badge]][sqlite-url]
 
 <p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
