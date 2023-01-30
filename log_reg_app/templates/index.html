@@ -1,126 +1,155 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register/Log-in</title>
+{% extends "base.html" %} 
+{% block title %} Login {% endblock %} 
 
-    <!-- Load Personal Styles -->
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'log_reg_app/style.css' %}">
+{% block content %}
+<!-- 2.1) Error messages if there is an error validation -->
+{% if messages %}
+<div class="row mb-4">
+    <div class="col-md-6">
+    <ul id="messageErrors" class="my-0 p-2">
+        Error Messages: {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+</div>
+{% endif %}
 
-    <!-- Load Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
-<body>
+<!-- 2.2) SignUp and SigIn Menus -->
+<div class="row">
+    <div class="col-md-6">
+    <!-- 2.2.1) Register Form -->
+    <form
+        class="text-center border border-secondary p-5"
+        action="/register"
+        method="POST"
+    >
+        {% csrf_token %}
 
-    <!-- I) Navigation Bar (Header Panel) -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-        <span class="navbar-brand mb-0 h1">The Wishes Company</span>
-    </nav>
+        <p class="h4 mb-4">Sign up</p>
 
-        <!-- II) Main Panel -->
-        <main role="main">
-        <div class="container-lg p-4">
+        <div class="form-row mb-4">
+        <div class="col">
+            <!-- First name -->
+            <input
+            type="text"
+            id="defaultRegisterFormFirstName"
+            class="form-control"
+            placeholder="First name"
+            name="first_name"
+            />
+        </div>
+        <div class="col">
+            <!-- Last name -->
+            <input
+            type="text"
+            id="defaultRegisterFormLastName"
+            class="form-control"
+            placeholder="Last name"
+            name="last_name"
+            />
+        </div>
+        </div>
 
-            <!-- 2.1) Error messages if there is an error validation -->
-            {% if messages %}
-            <div class="row mb-4">
-                <div class = "col-md-6">
-                    <ul id="messageErrors" class="my-0 p-2"> Error Messages:   
-                        {% for message in messages %}    
-                            <li>{{ message }}</li>    
-                        {% endfor %}
-                    </ul>
-                </div> 
-            </div>
-            {% endif %}
+        <!-- E-mail -->
+        <input
+        type="email"
+        id="defaultRegisterFormEmail"
+        class="form-control mb-4"
+        placeholder="E-mail"
+        name="email"
+        />
 
-            <!-- 2.2) SignUp and SigIn Menus -->
-            <div class="row">
-                <div class="col-md-6">
+        <!-- Password -->
+        <input
+        type="password"
+        id="defaultRegisterFormPassword"
+        class="form-control my-4"
+        placeholder="Password"
+        aria-describedby="defaultRegisterFormPasswordHelpBlock"
+        name="password"
+        />
+        <!-- Confirm Password -->
+        <input
+        type="password"
+        id="defaultRegisterFormPassword"
+        class="form-control"
+        placeholder="Confirm Password"
+        aria-describedby="defaultRegisterFormPasswordHelpBlock"
+        name="confirm_password"
+        />
 
-                <!-- 2.2.1) Register Form -->
-                    <form class="text-center border border-secondary p-5" action="/register" method="POST">
-                        {% csrf_token %}
+        <small
+        id="defaultRegisterFormPasswordHelpBlock"
+        class="form-text text-muted mb-4"
+        >
+        At least 8 characters
+        </small>
 
-                        <p class="h4 mb-4">Sign up</p>
+        <!-- Sign up button -->
+        <button class="btn btn-info my-4 btn-block" type="submit">
+        Sign in
+        </button>
+    </form>
+    </div>
 
-                        <div class="form-row mb-4">
-                            <div class="col">
-                                <!-- First name -->
-                                <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name" name="first_name">
-                            </div>
-                            <div class="col">
-                                <!-- Last name -->
-                                <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name"
-                                name="last_name">
-                            </div>
-                        </div>
+    <!-- 2.2.2) Log In Form -->
+    <div class="col-md-6 mt-4 mt-md-0">
+    <form
+        class="text-center border border-secondary p-5"
+        action="/login"
+        method="POST"
+    >
+        {% csrf_token %}
 
-                        <!-- E-mail -->
-                        <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail" name="email">
+        <p class="h4 mb-4">Sign in</p>
 
-                        <!-- Password -->
-                        <input type="password" id="defaultRegisterFormPassword" class="form-control my-4" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock"
-                        name="password"
-                        >
-                        <!-- Confirm Password -->
-                        <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Confirm Password" aria-describedby="defaultRegisterFormPasswordHelpBlock"
-                        name="confirm_password"
-                        >
+        <!-- Email -->
+        <input
+        type="email"
+        id="defaultLoginFormEmail"
+        class="form-control mb-4"
+        placeholder="E-mail"
+        name="email"
+        />
 
-                        <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-                            At least 8 characters
-                        </small>
+        <!-- Password -->
+        <input
+        type="password"
+        id="defaultLoginFormPassword"
+        class="form-control mb-4"
+        placeholder="Password"
+        name="password"
+        />
 
-                        <!-- Sign up button -->
-                        <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
-
-                    </form>
-                </div>
-
-                <!-- 2.2.2) Log In Form -->
-                <div class="col-md-6">
-                    
-                    <form class="text-center border border-secondary p-5" action="/login" method="POST">
-                        {% csrf_token %}
-
-                        <p class="h4 mb-4">Sign in</p>
-
-                        <!-- Email -->
-                        <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail" name=email>
-
-                        <!-- Password -->
-                        <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password" name=password>
-
-                        <!-- Remember me and Forgot Password -->
-                        <div class="d-flex justify-content-around">
-                            <div>
-                                <!-- Remember me -->
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
-                                    <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
-                                </div>
-                            </div>
-                            <div>
-                                <!-- Forgot password -->
-                                <a href="">Forgot password?</a>
-                            </div>
-                        </div>
-
-                        <!-- Sign in button -->
-                        <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
-
-                    </form>
-                </div>
+        <!-- Remember me and Forgot Password -->
+        <div class="d-flex justify-content-around">
+        <div>
+            <!-- Remember me -->
+            <div class="custom-control custom-checkbox">
+            <input
+                type="checkbox"
+                class="custom-control-input"
+                id="defaultLoginFormRemember"
+            />
+            <label
+                class="custom-control-label"
+                for="defaultLoginFormRemember"
+                >Remember me</label
+            >
             </div>
         </div>
-    </main>
+        <div>
+            <!-- Forgot password -->
+            <a href="">Forgot password?</a>
+        </div>
+        </div>
 
-    <!-- III) Footer panel -->
-    <footer class="page-footer text-center text-white bg-secondary">
-        <p> © The Wishes's Company 2020</p> 
-    </footer>
-</body>
-</html>
+        <!-- Sign in button -->
+        <button class="btn btn-info btn-block my-4" type="submit">
+        Sign in
+        </button>
+    </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %} 
+{% block title %} Stats {% endblock %} 
+
+{% block content %}
+<h3>Hello {{request.session.name}}! These are your stats!</h3>
+<hr>
+
+<!-- 2.1) Stats -->
+
+<p class="h4">
+  Total wishes granted so far by all users: {{all_wishes.count}}
+</p>
+<p class="h6">
+  Your granted wishes: {{wishes_granted_by_current_user.count}}
+</p>
+<p class="h6">
+  Your pending wishes: {{wishes_pending_by_current_user.count}}
+</p>
+{% endblock %}

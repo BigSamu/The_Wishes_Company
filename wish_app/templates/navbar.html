@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+  <div class="container-lg">
+    <span class="navbar-brand ml-2 mb-0 h1">The Wishes Company</span>
+
+    {% if request.session.id %}
+      <!-- Togller for other elements in Navigation Pannel when window screen is reduced -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links and Buttons of Navigation panel-->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          {% url 'home' as url_path %}
+    
+          {% if request.path != url_path%}
+            <li class="nav-item active">
+              <a class="nav-link" href="/wishes"><u>Dashboard</u></a>
+            </li>
+          {% endif %}
+          
+          {% if request.path == url_path%}
+          <li class="nav-item">
+            <a class="nav-link active" href="/wishes/stats"><u>Stats</u></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/wishes/new_wish"><u>New Wish</u></a>
+          </li>
+          {% endif %}
+
+          <li class="nav-item">
+            <a class="nav-link active" href="/wishes/logout"><u>Log Out</u></a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  {% endif %}
+</nav>

@@ -1,20 +1,23 @@
 from django.shortcuts import render, redirect
 from .models import *
 from django.contrib import messages
+from django.urls import reverse
+
 
 # Create your views here.
-def userDetails(request):
+def home(request):
 
     #Check if an user is logged in:
     if 'name' in request.session:
         
         currentUser = User.objects.get(id=request.session['id'])
-        
+        print(reverse('home'))
         context = {
             'all_wishes': Wish.objects.all(),
-            'wishes_uploaded_by_current_user': currentUser.wishes_uploaded.all() 
+            'wishes_uploaded_by_current_user': currentUser.wishes_uploaded.all(),
+            'current_user': currentUser
         }
-        return render(request,'user_details.html', context)
+        return render(request,'home.html', context)
     
     return redirect('/')
 
@@ -22,7 +25,7 @@ def logout(request):
     request.session.clear()
     return redirect('/')
 
-def makeWish(request):
+def new_wish(request):
     
     #Check if an user is logged in:
     if 'name' in request.session:
@@ -41,7 +44,7 @@ def makeWish(request):
                 if len(errors)>0:
                     for key, value in errors.items():
                         messages.error(request, value)
-                    return redirect('/wishes/new')
+                    return redirect('/wishes/new_wish')
 
                 # If not errors are found, then create the wish:
                 currentUser = User.objects.get(id=request.session['id'])
@@ -56,7 +59,7 @@ def makeWish(request):
     
     return redirect('/')
 
-def checkStats(request):
+def stats(request):
 
     #Check if an user is logged in:
     if 'name' in request.session:
@@ -70,11 +73,11 @@ def checkStats(request):
             'wishes_granted_by_current_user': wishesGrantedbyCurrentUser,
             'wishes_pending_by_current_user': wishesPendingbyCurrentUser,
         }
-        return render(request,'user_stats.html', context)
+        return render(request,'stats.html', context)
 
     return redirect('/')
 
-def removeWish(request,wish_id):
+def remove_wish(request,wish_id):
 
     #Check if an user is logged in:
     if 'name' in request.session:
@@ -92,7 +95,7 @@ def removeWish(request,wish_id):
     
     return redirect('/wishes')
 
-def editWish(request,wish_id):
+def edit_wish(request,wish_id):
     
     #Check if an user is logged in:
     if 'name' in request.session:
@@ -136,7 +139,7 @@ def editWish(request,wish_id):
     return redirect('/')
 
 
-def grantWish(request,wish_id):
+def grant_wish(request,wish_id):
 
     #Check if an user is logged in:
     if 'name' in request.session:
@@ -155,7 +158,7 @@ def grantWish(request,wish_id):
 
     return redirect('/wishes')
 
-def likeWish(request,wish_id):
+def like_wish(request,wish_id):
 
     #Check if an user is logged in:
     if 'name' in request.session:
@@ -167,6 +170,25 @@ def likeWish(request,wish_id):
         try:
             wishSelected = wishesFromOtherUsers.get(id=wish_id)
             currentUser.liked_wishes.add(wishSelected)
+            return redirect('/wishes')
+        except Wish.DoesNotExist:
+            # Add Message Error - LASTING!
+            return redirect('/wishes')
+    
+    return redirect('/wishes')
+
+def unlike_wish(request,wish_id):
+
+    #Check if an user is logged in:
+    if 'name' in request.session:
+
+        currentUser = User.objects.get(id=request.session['id'])
+        wishesFromOtherUsers = Wish.objects.exclude(uploaded_by=currentUser)
+        
+        # Handle wishes that doesn't exist or does not belong to him if user looks them by the URL (when inserting an ID)
+        try:
+            wishSelected = wishesFromOtherUsers.get(id=wish_id)
+            currentUser.liked_wishes.remove(wishSelected)
             return redirect('/wishes')
         except Wish.DoesNotExist:
             # Add Message Error - LASTING!

@@ -1,94 +1,71 @@
+{% extends "base.html" %} 
+{% block title %} Stats {% endblock %} 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Wish</title>
-  
-    <!-- Load Personal Styles -->
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'wish_app/style.css' %}">
+{% block content %}
+<h3>Hello {{request.session.name}}! Make a Wish!</h3>
+<hr>
 
-    <!-- Load Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
-<body>
-
-    <!-- I) Navigation Bar (Header Panel) -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-secondary">
-    <span class="navbar-brand"> Hello {{request.session.name}}! Make a Wish!</span>
-
-    <!-- Togller for other elements in Navigation Pannel when window screen is reduced -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Links and Buttons of Navigation panel--> 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/wishes"><u>Dashboard</u></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/wishes/logout"><u>Log Out</u></a>
-            </li>
-        </ul>  
+<!-- 2.1) Error messages if there is an error validation -->
+{% if messages %}
+<div class="row mb-4">
+    <div class="col-md-6">
+    <ul id="messageErrors" class="my-0 p-3">
+        Error Messages: {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
     </div>
-    </nav>
+</div>
+{% endif %}
 
-    <!-- II) Main Panel -->
-    <main role="main">
-    <div class="container-lg p-4">
+<!-- 2.2) New Wish Form -->
+<div class="row">
+    <div class="col-md-8">
+    <form
+        class="border border-secondary p-5"
+        action="/wishes/new_wish"
+        method="POST"
+    >
+        {% csrf_token %}
 
-        <!-- 2.1) Error messages if there is an error validation -->
-        {% if messages %}
-            <div class="row mb-4">
-                <div class = "col-md-6">
-                    <ul id="messageErrors" class="my-0 p-2"> Error Messages:   
-                        {% for message in messages %}    
-                            <li>{{ message }}</li>    
-                        {% endfor %}
-                    </ul>
-                </div> 
-            </div>
-        {% endif %}
+        <!-- Wish Item -->
+        <label for="defaultAddWishFormName">I wish for:</label>
+        <input
+        type="text"
+        id="defaultAddWishFormName"
+        class="form-control mb-3"
+        name="item"
+        placeholder="your wish"
+        />
 
-        <!-- 2.2) New Wish Form -->
-        <div class="row">
-            <div class="col-md-8">
+        <!-- Wish Description -->
+        <label for="defaultAddWishFormName">Description:</label>
+        <textarea
+        id="defaultAddWishFormName"
+        class="form-control"
+        name="description"
+        rows="5"
+        placeholder="why you want this wish?"
+        ></textarea>
 
-            <form class="border border-secondary p-5" action="/wishes/new" method="POST">
-                {% csrf_token %}
-
-                <!-- Wish Item -->
-                <label for="defaultAddWishFormName">I wish for:</label>
-                <input type="text" id="defaultAddWishFormName" class="form-control mb-3" name="item">
-
-                <!-- Wish Description -->
-                <label for="defaultAddWishFormName">Description:</label>
-                <textarea id="defaultAddWishFormName" class="form-control" name="description" rows="5"></textarea>
-
-                <!-- Update and Delete button -->
-                <div class="text-right">
-                    <button class="btn btn-light mt-4" type="submit" name="cancel_operation">Cancel</button>
-                    <button class="btn btn-success mt-4" type="submit" name="submit_operation">Submit</button>
-                </div>
-            </form>
-
+        <!-- Update and Delete button -->
+        <div class="text-right">
+        <button
+            class="btn btn-light mt-4"
+            type="submit"
+            name="cancel_operation"
+        >
+            Cancel
+        </button>
+        <button
+            class="btn btn-success mt-4"
+            type="submit"
+            name="submit_operation"
+        >
+            Submit
+        </button>
         </div>
+    </form>
     </div>
-    </main>
-
-    <!-- III) Footer panel -->
-    <footer class="page-footer text-center text-white bg-secondary">
-    <p> © Favorite Books's Company 2020</p> 
-    </footer>
-
-    <!-- IV) Bootstrap JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-</body>
-</html>
+</div>
+{% endblock %}
