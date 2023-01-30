@@ -6,8 +6,9 @@ name = "pypi"
 [packages]
 django = "*"
 bcrypt = "*"
+gunicorn = "*"
+django-extensions = "*"
 
 [dev-packages]
 
 [requires]
-
