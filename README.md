@@ -24,7 +24,7 @@
 
 A simple Django web application implementing CRUD operations and authentication.
 
->Live demo available [here](here)
+Live demo available [here](here)
 
 
 <p align="center">
