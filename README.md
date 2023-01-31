@@ -56,7 +56,7 @@ Live demo available in following (link)[link]
 
 ## About The Project
 
-Project for educational purposes applying a basic implementation of a full-stack web application using Django framework with Python and HTML.
+Project for educational purposes developing a basic implementation of a full-stack web application using Django framework and Python and HTML languages.
 
 <br>
 
