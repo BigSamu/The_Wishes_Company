@@ -24,15 +24,15 @@
 
 A simple Django web application implementing CRUD operations and authentication.
 
+>Live demo available [here](here)
+
+
 <p align="center">
   <img src="images/login-animation.gif" alt="login-animation" width="75%"/>
 </p>
 <p align="center">
   <img src="images/main-animation.gif" alt="main-animation" width="75%"/>
 </p>
-
->Live demo available [here](here)
-
 
 ---
 
