@@ -22,9 +22,12 @@
 [![Stars][stars-badge]][stars-url]
 [![Watchers][watchers-badge]][watchers-url]
 
-A simple Django web application implementing CRUD operations and authentication. 
+A simple Django web application implementing CRUD operations and authentication.
 
-> **NOTE**: Live demo available in following [link](here). Application deployed in AWS.
+_**The Wishes Company App:** sign up and add your wishes in our app 😃!!! Share them with others users and like them 🙌. Update the status of a wish if granted 🤩!!!._
+
+> **NOTE**: Demo of app available [here](here). Application deployed in AWS.
+
 
 <br>
 
@@ -34,9 +37,7 @@ A simple Django web application implementing CRUD operations and authentication.
 <p align="center">
   <img src="images/main-animation.gif" alt="main-animation" width="75%"/>
 </p>
-
-
-
+ 
 ---
 
 <!-- *********************************************************************** -->
@@ -68,7 +69,7 @@ A simple Django web application implementing CRUD operations and authentication.
 
 Educational project with the purpose of developing a basic implementation of a full-stack web application using Django framework and Python and HTML languages.
 
-SQLite Database in repository with data already created. Existing users with following details:
+SQLite Database in repository with data already created. Existing users with following details if wanted to interact with their accounts:
 
 * John Doe: 
   * email: johndoe@email.com
@@ -79,6 +80,7 @@ SQLite Database in repository with data already created. Existing users with fol
 * Samuel Valdes Gutierrez: 
   * email: samuel@email.com
   * password: samuel123456
+
 
 <p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
