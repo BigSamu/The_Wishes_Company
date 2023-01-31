@@ -17,15 +17,22 @@
 <!-- omit in toc -->
 
 # The Wishes Company
-
-A simple Django web application implementing CRUD operations and authentication.
-
-Live demo available in following (link)[link]
-
 [![License][license-badge]][license-url]
 [![Forks][forks-badge]][forks-url]
 [![Stars][stars-badge]][stars-url]
 [![Watchers][watchers-badge]][watchers-url]
+
+A simple Django web application implementing CRUD operations and authentication.
+
+<p align="center">
+  <img src="images/login-animation.gif" alt="login-animation" width="75%"/>
+</p>
+<p align="center">
+  <img src="images/main-animation.gif" alt="main-animation" width="75%"/>
+</p>
+
+>Live demo available [here](here)
+
 
 ---
 
@@ -56,18 +63,19 @@ Live demo available in following (link)[link]
 
 ## About The Project
 
-Project for educational purposes developing a basic implementation of a full-stack web application using Django framework and Python and HTML languages.
+Educational project with the purpose of developing a basic implementation of a full-stack web application using Django framework and Python and HTML languages.
 
-<br>
+SQLite Database in repository with data already created. Existing users with following details:
 
-<p align="center">
-  <img src="images/login-animation.gif" alt="login-animation" width="75%"/>
-</p>
-<p align="center">
-  <img src="images/main-animation.gif" alt="main-animation" width="75%"/>
-</p>
-
-<!-- Demo available in following [link](#) -->
+* John Doe: 
+  * email: johndoe@email.com
+  * password: john123456
+* Peter Phillips:
+  * email: peterphillips@email.com
+  * password: peter123456
+* Samuel Valdes Gutierrez: 
+  * email: samuel@email.com
+  * password: samuel123456
 
 <p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
