@@ -24,7 +24,7 @@
 
 A simple Django web application implementing CRUD operations and authentication. 
 
-> Live demo available in following [link](here). Application deployed in AWS.
+> **NOTE**: Live demo available in following [link](here). Application deployed in AWS.
 
 <br>
 
