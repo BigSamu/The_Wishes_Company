@@ -26,7 +26,7 @@ A simple Django web application implementing CRUD operations and authentication.
 
 _**The Wishes Company App:** sign up and add your wishes in our app 😃!!! Share them with others users and like them 🙌. Update the status of a wish if granted 🤩!!!._
 
-> **NOTE**: Demo of app available [here](here). Application deployed in AWS.
+> **NOTE**: Demo of app available [here](http://3.138.60.125/). Application deployed in AWS.
 
 
 <br>
