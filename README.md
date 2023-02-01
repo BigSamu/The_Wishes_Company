@@ -26,7 +26,7 @@ A simple Django web application implementing CRUD operations and authentication.
 
 _**The Wishes Company App:** sign up and add your wishes in our app 😃!!! Share them with others users and like them 🙌. Update the status of a wish if granted 🤩!!!._
 
-> **NOTE**: WebApp demo available in this [link](http://3.138.60.125/). Application deployed in AWS.
+> Demo available in following [link](http://3.138.60.125/). Application deployed in AWS.
 
 
 <br>
@@ -120,11 +120,9 @@ The following technologies are used for the implementation of this project:
 <!-- ----------------------------------------------------------------------- -->
 ### Prerequisites
 
-`Python 3` and Python Packae Manager (i.e `pip3`) are required for the setup of this web application.
+`Python3` and a `pip3` are required for the setup of this web application.
 
-> **NOTE:** Installation instructions [here][install-python-and-pip].
-
-> **NOTE:**  at the momment of creation of this project  `Python v3.9.13` and `pip v22.1.1` were used.
+> Installation instructions [here][install-python-and-pip].
 
 For easy management of packages and environments `pipenv` is used. For installing this tool globally run:
 
@@ -132,7 +130,8 @@ For easy management of packages and environments `pipenv` is used. For installin
 pip3 install pipenv
 ```
 
-> **NOTE:**  at the momment of creation of this project `pipenv v2022.9.24` was used.
+> **NOTE:** At the time of the implementation of this project, `Python v3.9.13`, `pip v22.1.1` and `pipenv v2022.9.24` were used.
+
 
 <!-- 3.2) Installation -->
 <!-- ----------------------------------------------------------------------- -->
