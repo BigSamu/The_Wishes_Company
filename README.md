@@ -122,7 +122,7 @@ The following technologies are used for the implementation of this project:
 
 `Python 3` and Python Packae Manager (i.e `pip3`) are required for the setup of this web application.
 
-> Installation instructions [here][install-python-and-pip].
+> **NOTE:** Installation instructions [here][install-python-and-pip].
 
 > **NOTE:**  at the momment of creation of this project  `Python v3.9.13` and `pip v22.1.1` were used.
 
@@ -132,7 +132,7 @@ For easy management of packages and environments `pipenv` is used. For installin
 pip3 install pipenv
 ```
 
-> **NOTE 2:**  at the momment of creation of this project `pipenv v2022.9.24` was used.
+> **NOTE:**  at the momment of creation of this project `pipenv v2022.9.24` was used.
 
 <!-- 3.2) Installation -->
 <!-- ----------------------------------------------------------------------- -->
