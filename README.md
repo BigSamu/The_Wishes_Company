@@ -53,6 +53,9 @@ _**The Wishes Company App:** sign up and add your wishes in our app 😃!!! Shar
   - [About The Project](#about-the-project)
   - [Technologies](#technologies)
   - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Usage](#usage)
   - [Contact Me](#contact-me)
   - [Support](#support)
   - [License](#license)
@@ -112,59 +115,71 @@ The following technologies are used for the implementation of this project:
 
 ## Getting Started
 
-IN PROGRESS....
-
 <!-- ----------------------------------------------------------------------- -->
 <!-- 3.1) Prerequisites -->
 <!-- ----------------------------------------------------------------------- -->
-<!-- ### Prerequisites
+### Prerequisites
 
-`Node.js` and `Node Package Manager (NPM)` are required for the setup of this web application.
+`Python 3` and Python Packae Manager (i.e `pip3`) are required for the setup of this web application.
 
-> Installation instructions [here][install-node-js-and-npm-url].
+> Installation instructions [here][install-python-and-pip].
 
-> **NOTE:**  at the momment of creation of this project  `Node.js v18.6.0` and `NPM v9.4.0` were used. -->
+> **NOTE:**  at the momment of creation of this project  `Python v3.9.13` and `pip v22.1.1` were used.
+
+For easy management of packages and environments `pipenv` is used. For installing this tool globally run:
+
+```sh
+pip3 install pipenv
+```
+
+> **NOTE 2:**  at the momment of creation of this project `pipenv v2022.9.24` was used.
 
 <!-- 3.2) Installation -->
 <!-- ----------------------------------------------------------------------- -->
-<!-- ### Installation
+### Installation
 
 To get a copy of this project and run it in your local environment, follow the steps listed below.
 
 1. Clone the repo
 
    ```sh
-   git clone https://github.com/BigSamu/Buda_Prices_ReactJS.git
+   git clone https://github.com/BigSamu/The_Wishes_Company.git
    ```
 
 2. Go into the repository
 
    ```sh
-   cd Buda_Prices_ReactJS
+   cd The_Wishes_Company
    ```
 
-3. Install required NPM packages or dependencies
+3. Activate virtual environemnt
 
    ```sh
-   npm install
+   pipenv shell
    ```
 
-4. Run application
+4. Install required pyhon packages or dependencies
+
+   ```sh
+   pipenv install
+   ```
+
+5. Run application
 
     ```sh
-   npm run
+   python manage.py runserver
    ```
 
-<p align="right">(<a href="#back-to-top">back to top</a>)</p> -->
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
 <!-- ----------------------------------------------------------------------- -->
 <!-- 3.3) Usage -->
 <!-- ----------------------------------------------------------------------- -->
-<!-- ### Usage
+### Usage
 
-After succesfull installation, you will be able to check the WebApp in any browser by visiting the following URL address: [localhost: 3000](http://localhost:3000/)
+After succesfull installation, you will be able to check the WebApp in any browser by visiting the following URL address: [localhost:8000](http://localhost:8000/)
 
-<p align="right">(<a href="#back-to-top">back to top</a>)</p> -->
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
 ---
 
@@ -413,9 +428,9 @@ Developed with ❤️ in Chile 🇨🇱
 <!-- *********************************************************************** -->
 
 <!-- Node.js and NPM -->
-
 [install-node-js-and-npm-url]: https://gist.github.com/MichaelCurrin/aa1fc56419a355972b96bce23f3bccba
 
 <!-- Ruby, Rubygems and Bundler -->
-
 [install-ruby-and-bundler]: https://gist.github.com/MichaelCurrin/fb758aea4d35e03b9ed093afddf4e7ec
+
+[install-python-and-pip]: https://realpython.com/installing-python/
