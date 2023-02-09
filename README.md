@@ -130,7 +130,7 @@ For easy management of packages and environments `pipenv` is used. For installin
 pip3 install pipenv
 ```
 
-> **NOTE:** At the time of the implementation of this project, `Python v3.9.13`, `pip v22.1.1` and `pipenv v2022.9.24` were used.
+> **NOTE:** At the time of the implementation of this project, `Python v3.9.13`, `pip v22.3.1` and `pipenv v2022.9.24` were used.
 
 
 <!-- 3.2) Installation -->
