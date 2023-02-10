@@ -5,10 +5,12 @@ from django.contrib import messages
 
 # Create your views here.
 def index(request):
+    if 'name' in request.session:
+        return redirect('/wishes')
     return render(request,'index.html')
 
+# Register new user
 def register(request):
-    print(request.POST)
     
     errors = User.objects.validatorSignUp(request.POST)
     
@@ -29,8 +31,8 @@ def register(request):
     request.session['id'] = newUser.id
     return redirect('/wishes')
 
+# Login for current user
 def login(request):
-    # login for current User
     
     if request.method == 'POST':
         errors = User.objects.validatorSignIn(request.POST)
