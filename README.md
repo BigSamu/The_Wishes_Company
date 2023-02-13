@@ -22,7 +22,7 @@
 [![Stars][stars-badge]][stars-url]
 [![Watchers][watchers-badge]][watchers-url]
 
-A simple Django web application implementing CRUD operations and authentication.
+A simple educational Django web application implementing CRUD operations and authentication.
 
 _**The Wishes Company App:** sign up and add your wishes in our app 😃!!! Share them with others users and like them 🙌. Update the status of a wish if granted 🤩!!!._
 
