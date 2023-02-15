@@ -72,7 +72,7 @@ _**The Wishes Company App:** sign up and add your wishes in our app 😃!!! Shar
 
 Educational project with the purpose of developing a basic implementation of a full-stack web application using Django framework and Python and HTML languages.
 
-SQLite Database in repository with data already created. Existing users with following details if wanted to interact with their accounts:
+SQLite Database in repository with data already created. Existing users and their related credentials detailed below:
 
 * John Doe: 
   * email: johndoe@email.com
