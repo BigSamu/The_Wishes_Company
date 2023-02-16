@@ -70,7 +70,7 @@ _**The Wishes Company App:** sign up and add your wishes in our app 😃!!! Shar
 
 ## About The Project
 
-Educational project with the purpose of developing a basic implementation of a full-stack web application using Django framework and Python and HTML as main programming languages.
+Educational project with the purpose of developing a basic implementation of a full-stack web application using Django framework and Python and HTML as main programming languages. The project includes logic for basic CRUD operations and authentication.
 
 SQLite Database in repository with data already created. Existing users and their related credentials detailed below:
 
